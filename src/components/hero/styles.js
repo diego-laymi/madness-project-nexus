@@ -168,8 +168,6 @@ export const BaseButton = styled.a`
 
 export const MainButton = styled(BaseButton)`
   padding: 12px 15.5px;
-  /* width: 215px;
-  height: 49px; */
   background-color: ${props => props.theme.red_transparent};
   background-image: url('./backgrounds/redScanlines.png');
 

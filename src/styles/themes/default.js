@@ -15,11 +15,17 @@ export const defaultTheme = {
 
   red_transparent: "rgba(80, 0, 0, 0.5)",
   red_hover: "rgba(80, 0, 0, 1)",
+
   white_transparent: "rgba(41, 41, 41, 0.5)",
   white_hover: "rgba(41, 41, 41, 0.7)",
-  gradient: "linear-gradient(177.16deg, #A70000 9.01%, #FF4040 30.62%)",
+
+  gradient: "linear-gradient(177.16deg, #A70000 43.01%, #F44040 54.62%)",
+
   red_text_neon: "0px 0px 5.5px #FF0000",
+  red_divider_neon:
+    "0px 0px 250px #FF0000, 0px 0px 250px #FF0000, 0px 0px 225.792px #FF0000, 0px 0px 112.896px #FF0000, 0px 0px 32.256px #FF0000, 0px 0px 16.128px #FF0000",
+
   white_text_neon: "0px 0px 5.5px #FFFFFF",
-  red_divider_neon: "0px 0px 250px #FF0000, 0px 0px 250px #FF0000, 0px 0px 225.792px #FF0000, 0px 0px 112.896px #FF0000, 0px 0px 32.256px #FF0000, 0px 0px 16.128px #FF0000",
-  white_divider_neon: "0px 0px 250px #FFFFFF, 0px 0px 250px #FFFFFF, 0px 0px 225.792px #FFFFFF, 0px 0px 112.896px #FFFFFF, 0px 0px 32.256px #FFFFFF, 0px 0px 16.128px #FFFFFF",
-}
+  white_divider_neon:
+    "0px 0px 250px #FFFFFF, 0px 0px 250px #FFFFFF, 0px 0px 225.792px #FFFFFF, 0px 0px 112.896px #FFFFFF, 0px 0px 32.256px #FFFFFF, 0px 0px 16.128px #FFFFFF",
+};

@@ -12,6 +12,7 @@ export const defaultTheme = {
   black_950: "#000000",
 
   red: "#FE0101",
+  green: "#00ff00",
 
   red_transparent: "rgba(80, 0, 0, 0.5)",
   red_hover: "rgba(80, 0, 0, 1)",
@@ -19,9 +20,9 @@ export const defaultTheme = {
   white_transparent: "rgba(41, 41, 41, 0.5)",
   white_hover: "rgba(41, 41, 41, 0.7)",
 
-  gradient: "linear-gradient(177.16deg, #A70000 43.01%, #F44040 54.62%)",
+  gradient: "linear-gradient(177deg, #A70000 40%, #F44040 57%)",
 
-  red_text_neon: "0px 0px 5.5px #FF0000",
+  red_text_neon: "0px 0px 5.5px #FE0101",
   red_divider_neon:
     "0px 0px 250px #FF0000, 0px 0px 250px #FF0000, 0px 0px 225.792px #FF0000, 0px 0px 112.896px #FF0000, 0px 0px 32.256px #FF0000, 0px 0px 16.128px #FF0000",
 

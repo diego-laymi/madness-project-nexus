@@ -12,13 +12,11 @@ export const AboutContainer = styled.section`
   
   @media (min-width: 768px) 
   {
-    padding: 20px;
     width: calc(100% - 21px);
   }
 
   @media (min-width: 1280px) 
   {
-    padding: 20px;
     width: calc(100% - 80px);
   }
 `
@@ -74,17 +72,20 @@ export const InfoWrapper = styled.div`
   }
 `
 export const GameImage = styled.img`
-  flex: 1;  
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 9; 
   user-select: none;
   border: 1px solid ${props => props.theme.red};
   object-fit: contain;
+
+  @media (min-width: 1280px) 
+  {
+    width: 50%;
+  }
 `
 
 export const ClassicGameImage = styled.img`
-  flex: 1;  
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 9; 
@@ -95,11 +96,7 @@ export const ClassicGameImage = styled.img`
 
   @media (min-width: 1280px) 
   {
-    flex: 1;  
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9; 
-    user-select: none;
+    width: 50%;
     order: 1;
   }
 `

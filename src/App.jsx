@@ -1,9 +1,16 @@
 import { ThemeProvider } from "styled-components";
 import { AboutSection } from "./components/about";
-import { DividerLeft, DividerRight } from "./components/dividers";
+import {
+  RedDividerLeft,
+  RedDividerRight,
+  WhiteDividerLeft,
+  WhiteDividerRight,
+} from "./components/dividers";
+import { FeatureSection } from "./components/features";
 import { Header } from "./components/header";
 import { HeroSection } from "./components/hero";
-import { AppContainer, RedBackground } from "./styles";
+import { Updates } from "./components/updates";
+import { AppContainer, RedBackground, WhiteBackground } from "./styles";
 import { GlobalStyle } from "./styles/global";
 import { defaultTheme } from "./styles/themes/default";
 
@@ -14,10 +21,16 @@ export function App() {
         <Header />
         <HeroSection />
         <RedBackground>
-          <DividerLeft />
+          <RedDividerLeft />
           <AboutSection />
-          <DividerRight />
+          <RedDividerRight />
         </RedBackground>
+        <FeatureSection />
+        <WhiteBackground>
+          <WhiteDividerLeft />
+          <Updates />
+          <WhiteDividerRight />
+        </WhiteBackground>
       </AppContainer>
       <GlobalStyle />
     </ThemeProvider>

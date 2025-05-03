@@ -12,7 +12,7 @@ export const defaultTheme = {
   black_950: "#000000",
 
   red: "#FE0101",
-  green: "#00ff00",
+  white: '#FFFFFF',
 
   red_transparent: "rgba(80, 0, 0, 0.5)",
   red_hover: "rgba(80, 0, 0, 1)",

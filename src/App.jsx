@@ -7,6 +7,7 @@ import {
   WhiteDividerRight,
 } from "./components/dividers";
 import { FeatureSection } from "./components/features";
+import { Footer } from "./components/footer";
 import { Header } from "./components/header";
 import { HeroSection } from "./components/hero";
 import { Updates } from "./components/updates";
@@ -31,6 +32,7 @@ export function App() {
           <Updates />
           <WhiteDividerRight />
         </WhiteBackground>
+        <Footer />
       </AppContainer>
       <GlobalStyle />
     </ThemeProvider>

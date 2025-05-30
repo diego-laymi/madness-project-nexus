@@ -144,7 +144,7 @@ export function Footer() {
             )}
 
             <GameLinkPillar>
-              <GameLink href="#">
+              <GameLink href="https://discord.gg/projectnexus">
                 <img src="./assets/corners_Red/cornerBottomLeft.png" alt="" />
                 <img src="./assets/corners_Red/cornerTopLeft.png" alt="" />
                 <img src="./assets/corners_Red/cornerBottomRight.png" alt="" />
@@ -162,7 +162,7 @@ export function Footer() {
               />
             </GameLinkPillar>
             <GameLinkPillar>
-              <GameLink href="#">
+              <GameLink href="https://x.com/Mprojectnexus/">
                 <img src="./assets/corners_Red/cornerBottomLeft.png" alt="" />
                 <img src="./assets/corners_Red/cornerTopLeft.png" alt="" />
                 <img src="./assets/corners_Red/cornerBottomRight.png" alt="" />
@@ -180,7 +180,7 @@ export function Footer() {
               />
             </GameLinkPillar>
             <GameLinkPillar>
-              <GameLink href="#">
+              <GameLink href="https://www.youtube.com/@MADNESSProjectNexus/">
                 <img src="./assets/corners_Red/cornerBottomLeft.png" alt="" />
                 <img src="./assets/corners_Red/cornerTopLeft.png" alt="" />
                 <img src="./assets/corners_Red/cornerBottomRight.png" alt="" />
@@ -198,7 +198,7 @@ export function Footer() {
               />
             </GameLinkPillar>
             <GameLinkPillar>
-              <GameLink href="#">
+              <GameLink href="https://store.steampowered.com/app/488860/MADNESS_Project_Nexus/">
                 <img src="./assets/corners_Red/cornerBottomLeft.png" alt="" />
                 <img src="./assets/corners_Red/cornerTopLeft.png" alt="" />
                 <img src="./assets/corners_Red/cornerBottomRight.png" alt="" />

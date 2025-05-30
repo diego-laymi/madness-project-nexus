@@ -2,14 +2,27 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
   position: absolute;
-  z-index: 3;
+  inset: 0;
   
-  width: 100%;
+  width: calc(100vw - 80px);
   height: 64px;
-  
-  padding: 0 40px;
+  max-width: 1840px;
+
   margin: 0 auto;
   margin-top: 40px;
+
+  display: flex;
+  justify-content: center;
+
+  a {
+    text-decoration: none; 
+    z-index: 3;
+  }
+
+  @media (min-width: 678px)
+  {
+    justify-content: start;
+  }
 `
 export const HeaderLogo = styled.img`
   width: 224px;

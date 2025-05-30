@@ -8,14 +8,57 @@ import {
   HoverEffet,
   ImageActions,
   ImageButton,
+  ImageSlider,
   InfoWrapper,
   MainLink,
   Text,
   Title,
 } from "./styles";
 
+import img_0 from "../../../public/images/mpn_Images/0.webp";
+import img_1 from "../../../public/images/mpn_Images/1.webp";
+import img_10 from "../../../public/images/mpn_Images/10.webp";
+import img_11 from "../../../public/images/mpn_Images/11.webp";
+import img_2 from "../../../public/images/mpn_Images/2.webp";
+import img_3 from "../../../public/images/mpn_Images/3.webp";
+import img_4 from "../../../public/images/mpn_Images/4.webp";
+import img_5 from "../../../public/images/mpn_Images/5.webp";
+import img_6 from "../../../public/images/mpn_Images/6.webp";
+import img_7 from "../../../public/images/mpn_Images/7.webp";
+import img_8 from "../../../public/images/mpn_Images/8.webp";
+import img_9 from "../../../public/images/mpn_Images/9.webp";
+
 export function AboutSection() {
+  const [imageIndex, setImageIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
+  const images = [
+    img_0,
+    img_1,
+    img_2,
+    img_3,
+    img_4,
+    img_5,
+    img_6,
+    img_7,
+    img_8,
+    img_9,
+    img_10,
+    img_11,
+  ];
+
+  function nextImage() {
+    setImageIndex((index) => {
+      if (index === images.length - 1) return 0;
+      return index + 1;
+    });
+  }
+
+  function prevImage() {
+    setImageIndex((index) => {
+      if (index === 0) return images.length - 1;
+      return index - 1;
+    });
+  }
 
   useEffect(() => {
     const handleResize = () => {
@@ -33,7 +76,15 @@ export function AboutSection() {
         <Title>THE GAME</Title>
         <span />
         <AboutWraper>
-          <GameImage src="./images/mpn_placeholder.png" />
+          <ImageSlider>
+            {images.map((img) => (
+              <GameImage
+                src={img}
+                key={img}
+                style={{ translate: `${-100 * imageIndex}%` }}
+              />
+            ))}
+          </ImageSlider>
           <InfoWrapper>
             <Text>
               <p>
@@ -50,13 +101,13 @@ export function AboutSection() {
               </p>
             </Text>
             <ImageActions>
-              <ImageButton>
+              <ImageButton onClick={prevImage}>
                 <span />
                 PREVIOUS
               </ImageButton>
               <div>
                 <span />
-                <ImageButton>
+                <ImageButton onClick={nextImage}>
                   <span />
                   NEXT
                 </ImageButton>

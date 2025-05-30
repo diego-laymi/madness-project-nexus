@@ -11,9 +11,11 @@ export const DividerContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
 
   img {
     position: absolute;
-    z-index: 10;
+    z-index: 2;
+
   }
 `;

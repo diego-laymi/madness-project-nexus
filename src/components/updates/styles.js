@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const UpdatesContainer = styled.section`
   width: calc(100% - 32px);
-  max-width: none;
+  max-width: 1840px;
   margin: 44px auto;
   display: flex;
   flex-direction: column;
@@ -172,6 +172,8 @@ export const Image = styled.img`
 `
 
 export const MainLink = styled.a`
+  margin-left: auto;
+  max-width: fit-content;
   text-align: center;
   z-index: 11;
   display: flex;

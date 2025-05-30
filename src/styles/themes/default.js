@@ -18,7 +18,7 @@ export const defaultTheme = {
   red_hover: "rgba(80, 0, 0, 1)",
 
   white_transparent: "rgba(41, 41, 41, 0.5)",
-  white_hover: "rgba(41, 41, 41, 0.7)",
+  white_hover: "rgba(255, 255, 255, 0.2)",
 
   gradient: "linear-gradient(177deg, #A70000 40%, #F44040 57%)",
   pilar_gradient_left: "linear-gradient(162deg, #FF4040 17%, #ff2f14 37.36%)",

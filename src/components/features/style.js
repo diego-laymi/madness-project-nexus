@@ -6,20 +6,20 @@ export const ScrollContainer = styled.section`
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  padding: 80px 16px;
+  max-width: 1920px;
+  margin: 0 auto;
 
   @media (min-width: 1280px) 
   {
-    width: 100%;
     height: 100dvh;
-    display: flex;
-    align-items: center;
     padding: 0 40px;
   }
 `
 
 export const FeatureContainer = styled.div`
   width: 100%;
+  max-width: 1840px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
@@ -27,27 +27,17 @@ export const FeatureContainer = styled.div`
 
   @media (min-width: 768px) 
   {
-    height: 100vh;
-    grid-template-columns: 1fr;
-    gap: 20px;
-
-    .title-2{
+    .title-2, .title-3{ 
       display: none;
     }
-    .title-3{
-      display: none;
-    }
-
-    .text-2{
-      display: none;
-    }
-    .text-3{
+    .text-2, .text-3{
       display: none;
     }
   }
 
   @media (min-width: 1280px) 
   {
+    height: 100vh;
     grid-template-columns: 1fr 20px 1fr;
     gap: 20px;
   }
@@ -180,7 +170,6 @@ export const Text = styled.p`
 
 `
 
-
 export const PositionButton = styled.button`
   width: 20px;
   height: 20px;
@@ -255,6 +244,7 @@ export const FeatureFirstPreview = styled.div`
   width: 100%;
   clip-path: polygon(22px 0, 100% 0, 100% calc(100% - 22px), calc(50% + 22px) calc(100% - 22px), 50% 100%, 0 100%, 0 22px);
   background-color: red;
+  opacity: 1;
 
   video
   {
@@ -264,20 +254,15 @@ export const FeatureFirstPreview = styled.div`
     clip-path: polygon(23px 1px, calc(100% - 1px) 1px, calc(100% - 1px) calc(100% - 23px), calc(50% + 21px) calc(100% - 23px), calc(50% - 1px) calc(100% - 1px), 1px calc(100% - 1px), 1px 22px);
   }
 
-  @media (min-width: 768px) 
-  {
-    opacity: 0;
-  }
-
   @media (min-width: 1280px) 
   {
+    opacity: 0;
     display: flex;
     clip-path: polygon(44px 0, 100% 0, 100% calc(100% - 44px), calc(50% + 44px) calc(100% - 44px), 50% 100%, 0 100%, 0 44px);
-
     video
-  {
-    clip-path: polygon(44px 1px, calc(100% - 1px) 1px, calc(100% - 1px) calc(100% - 45px), calc(50% + 44px) calc(100% - 45px), calc(50% - 1px) calc(100% - 1px), 1px calc(100% - 1px), 1px 44px);
-  }
+    {
+      clip-path: polygon(44px 1px, calc(100% - 1px) 1px, calc(100% - 1px) calc(100% - 45px), calc(50% + 44px) calc(100% - 45px), calc(50% - 1px) calc(100% - 1px), 1px calc(100% - 1px), 1px 44px);
+    }
   }
 `
 export const FeatureSecondPreview = styled.div`
@@ -295,13 +280,9 @@ export const FeatureSecondPreview = styled.div`
     clip-path: polygon(calc(50% + 36px) 23px, calc(50% + 35px + 23px) 1px, calc(100% - 1px) 1px, calc(100% - 1px) calc(100% - 1px), calc(50% + 35px + 23px)  calc(100% - 1px), calc(50% + 36px) calc(100% - 23px), 1px calc(100% - 23px), 1px 23px);
   }
 
-  @media (min-width: 768px) 
-  {
-    opacity: 0;
-  }
-
   @media (min-width: 1280px) 
   {
+    opacity: 0;
     display: flex;
     clip-path: polygon(calc(50% - 44px) 44px, calc(50%) 0px, 100% 0, 100% 100%, calc(50% + 40px) 100%, calc(50%) calc(100% - 44px), 0 calc(100% - 44px), 0 44px);
 
@@ -326,13 +307,9 @@ export const FeatureThirdPreview = styled.div`
     clip-path: polygon(calc(100% - 1px) calc(100% - 23px), calc(50% + 70px + 22px) calc(100% - 23px), calc(50% + 70px) calc(100% - 1px), calc(50% - 70px + 22px) calc(100% - 1px), calc(50% - 70px) calc(100% - 23px), 1px calc(100% - 23px), 1px 1px, calc(50% - 48px - 23px) 1px, calc(50% - 49px) 23px, calc(100% - 1px) 23px);
   }
 
-  @media (min-width: 768px) 
-  {
-    opacity: 0;
-  }
-
   @media (min-width: 1280px) 
   {
+    opacity: 0;
     display: flex;
     clip-path: polygon(100% calc(100% - 44px), calc(50% + 20%) calc(100% - 44px), calc(50% + 20% - 44px) 100%, calc(50% - 20% + 44px) 100%, calc(50% - 20%) calc(100% - 44px), 0px calc(100% - 44px), 0 0, calc(50% - 44px - 44px) 0, calc(50% - 48px) 44px, 100% 44px);
 

@@ -28,7 +28,7 @@ import { useEffect, useState } from "react";
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollToPlugin);
 
 export function FeatureSection() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 430);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
 
   function ScrollToFeature(feature) {
     const scrollContainer = document.querySelector("#cont");
@@ -121,7 +121,7 @@ export function FeatureSection() {
 
   useEffect(() => {
     const handleWindowResizing = () => {
-      setIsMobile(window.innerWidth < 430);
+      setIsMobile(window.innerWidth < 1280);
     };
     window.addEventListener("resize", handleWindowResizing);
     return () => window.removeEventListener("resize", handleWindowResizing);

@@ -71,7 +71,7 @@ export function AboutSection() {
   }, []);
 
   return (
-    <AboutContainer>
+    <AboutContainer id="about">
       <ContentWrapper>
         <Title>THE GAME</Title>
         <span />

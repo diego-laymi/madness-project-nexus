@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
   html,
   body 
   {
+    scroll-behavior: smooth;
     background-color: ${props => props.theme.black_950};
     font-family: "Orbitron", sans-serif;
     color: ${props => props.theme.black_50};

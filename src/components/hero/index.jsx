@@ -144,7 +144,7 @@ export function HeroSection() {
               <img src="./assets/corners_Red/cornerTopRight.png" alt="" />
               START CARNAGE
             </MainButton>
-            <SecondaryButton>
+            <SecondaryButton href="#about">
               <img src="./assets/corners_White/cornerBottomLeft.png" alt="" />
               <img src="./assets/corners_White/cornerTopLeft.png" alt="" />
               <img src="./assets/corners_White/cornerBottomRight.png" alt="" />

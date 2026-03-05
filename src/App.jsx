@@ -1,39 +1,32 @@
 import { ThemeProvider } from "styled-components";
-import { AboutSection } from "./components/about";
-import {
-  RedDividerLeft,
-  RedDividerRight,
-  WhiteDividerLeft,
-  WhiteDividerRight,
-} from "./components/dividers";
-import { FeatureSection } from "./components/features";
-import { Footer } from "./components/footer";
-import { Header } from "./components/header";
-import { HeroSection } from "./components/hero";
-import { Updates } from "./components/updates";
-import { AppContainer, RedBackground, WhiteBackground } from "./styles";
-import { GlobalStyle } from "./styles/global";
 import { defaultTheme } from "./styles/themes/default";
+import { GlobalStyle } from "./styles/global";
+
+import { Header } from "./components/header";
+import { Footer } from "./components/footer";
+import { PageContainer } from "./styles";
+import {
+  AboutSection,
+  FeatureSection,
+  HeroSection,
+  UpdatesSection,
+} from "./components/sections";
+
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+gsap.registerPlugin(useGSAP);
 
 export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <AppContainer>
+      <PageContainer>
         <Header />
         <HeroSection />
-        <RedBackground>
-          <RedDividerLeft />
-          <AboutSection />
-          <RedDividerRight />
-        </RedBackground>
+        <AboutSection />
         <FeatureSection />
-        <WhiteBackground>
-          <WhiteDividerLeft />
-          <Updates />
-          <WhiteDividerRight />
-        </WhiteBackground>
+        <UpdatesSection />
         <Footer />
-      </AppContainer>
+      </PageContainer>
       <GlobalStyle />
     </ThemeProvider>
   );

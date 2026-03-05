@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const AppContainer = styled.div`
+export const PageContainer = styled.div`
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -32,4 +32,4 @@ export const WhiteBackground = styled.div`
     background-repeat: repeat-y;
     opacity: 0.25;
   }
-`
+`;

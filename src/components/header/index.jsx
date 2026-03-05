@@ -1,11 +1,10 @@
-import React from "react";
-import { HeaderContainer, HeaderLogo } from "./styles";
+import { HeaderContainer, Logo } from "./styles";
 
 export function Header() {
   return (
     <HeaderContainer>
-      <a href="#">
-        <HeaderLogo src="./mpn_Logo.png" />
+      <a href="/">
+        <Logo src="./mpn_Logo.png" />
       </a>
     </HeaderContainer>
   );

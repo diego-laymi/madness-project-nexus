@@ -156,8 +156,8 @@ export function Footer() {
                   windowWidth < 768
                     ? "150"
                     : windowWidth >= 768 && windowWidth < 1280
-                    ? "237"
-                    : windowWidth >= 1280 && "154"
+                      ? "237"
+                      : windowWidth >= 1280 && "154"
                 }
               />
             </GameLinkPillar>
@@ -174,8 +174,8 @@ export function Footer() {
                   windowWidth < 768
                     ? "150"
                     : windowWidth >= 768 && windowWidth < 1280
-                    ? "237"
-                    : windowWidth >= 1280 && "154"
+                      ? "237"
+                      : windowWidth >= 1280 && "154"
                 }
               />
             </GameLinkPillar>
@@ -192,8 +192,8 @@ export function Footer() {
                   windowWidth < 768
                     ? "150"
                     : windowWidth >= 768 && windowWidth < 1280
-                    ? "237"
-                    : windowWidth >= 1280 && "154"
+                      ? "237"
+                      : windowWidth >= 1280 && "154"
                 }
               />
             </GameLinkPillar>
@@ -210,8 +210,8 @@ export function Footer() {
                   windowWidth < 768
                     ? "150"
                     : windowWidth >= 768 && windowWidth < 1280
-                    ? "237"
-                    : windowWidth >= 1280 && "154"
+                      ? "237"
+                      : windowWidth >= 1280 && "154"
                 }
               />
             </GameLinkPillar>

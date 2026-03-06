@@ -16,6 +16,5 @@ export const DividerContainer = styled.div`
   img {
     position: absolute;
     z-index: 2;
-
   }
 `;

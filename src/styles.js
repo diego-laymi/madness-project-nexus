@@ -16,7 +16,7 @@ export const RedBackground = styled.div`
     background-image: url("./backgrounds/gridRedBackground.png");
     background-position: center;
     background-repeat: repeat-y;
-    opacity: 0.45;
+    opacity: 0.7;
   }
 `;
 

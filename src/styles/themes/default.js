@@ -12,7 +12,7 @@ export const defaultTheme = {
   black_950: "#000000",
 
   red: "#FE0101",
-  white: '#FFFFFF',
+  white: "#FFFFFF",
 
   red_transparent: "rgba(80, 0, 0, 0.5)",
   red_hover: "rgba(80, 0, 0, 1)",
@@ -25,8 +25,10 @@ export const defaultTheme = {
   pilar_gradient_right: "linear-gradient(190deg, #FF4040 17%, #ff2f14 37.36%)",
 
   red_text_neon: "0px 0px 5.5px #FE0101",
-  red_divider_neon: "0px 0px 250px #FF0000, 0px 0px 250px #FF0000, 0px 0px 225.792px #FF0000, 0px 0px 112.896px #FF0000, 0px 0px 32.256px #FF0000, 0px 0px 16.128px #FF0000",
+  red_divider_neon:
+    "0px 0px 250px #FF0000, 0px 0px 250px #FF0000, 0px 0px 225.792px #FF0000, 0px 0px 112.896px #FF0000, 0px 0px 32.256px #FF0000, 0px 0px 16.128px #FF0000",
 
   white_text_neon: "0px 0px 5.5px #FFFFFF",
-  white_divider_neon: "0px 0px 250px #FFFFFF, 0px 0px 250px #FFFFFF, 0px 0px 225.792px #FFFFFF, 0px 0px 112.896px #FFFFFF, 0px 0px 32.256px #FFFFFF, 0px 0px 16.128px #FFFFFF",
+  white_divider_neon:
+    "0px 0px 250px #FFFFFF, 0px 0px 250px #FFFFFF, 0px 0px 225.792px #FFFFFF, 0px 0px 112.896px #FFFFFF, 0px 0px 32.256px #FFFFFF, 0px 0px 16.128px #FFFFFF",
 };

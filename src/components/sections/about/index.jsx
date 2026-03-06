@@ -1,4 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { RedBackground } from "../../../styles";
+import { RedDividerLeft, RedDividerRight } from "../../dividers";
 import {
   AboutContainer,
   AboutWraper,
@@ -10,42 +12,62 @@ import {
   ImageButton,
   ImageSlider,
   InfoWrapper,
-  MainLink,
+  Link,
   Text,
   Title,
 } from "./styles";
 
-import img_0 from "../../../../public/images/mpn_Images/0.webp";
-import img_1 from "../../../../public/images/mpn_Images/1.webp";
-import img_10 from "../../../../public/images/mpn_Images/10.webp";
-import img_11 from "../../../../public/images/mpn_Images/11.webp";
-import img_2 from "../../../../public/images/mpn_Images/2.webp";
-import img_3 from "../../../../public/images/mpn_Images/3.webp";
-import img_4 from "../../../../public/images/mpn_Images/4.webp";
-import img_5 from "../../../../public/images/mpn_Images/5.webp";
-import img_6 from "../../../../public/images/mpn_Images/6.webp";
-import img_7 from "../../../../public/images/mpn_Images/7.webp";
-import img_8 from "../../../../public/images/mpn_Images/8.webp";
-import img_9 from "../../../../public/images/mpn_Images/9.webp";
-import { RedBackground } from "../../../styles";
-import { RedDividerLeft, RedDividerRight } from "../../dividers";
-
 export function AboutSection() {
   const [imageIndex, setImageIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 1280);
   const images = [
-    img_0,
-    img_1,
-    img_2,
-    img_3,
-    img_4,
-    img_5,
-    img_6,
-    img_7,
-    img_8,
-    img_9,
-    img_10,
-    img_11,
+    {
+      id: 1,
+      img_url: "/images/game_images/0.webp",
+    },
+    {
+      id: 2,
+      img_url: "/images/game_images/1.webp",
+    },
+    {
+      id: 3,
+      img_url: "/images/game_images/2.webp",
+    },
+    {
+      id: 4,
+      img_url: "/images/game_images/3.webp",
+    },
+    {
+      id: 5,
+      img_url: "/images/game_images/4.webp",
+    },
+    {
+      id: 6,
+      img_url: "/images/game_images/5.webp",
+    },
+    {
+      id: 7,
+      img_url: "/images/game_images/6.webp",
+    },
+    {
+      id: 8,
+      img_url: "/images/game_images/7.webp",
+    },
+    {
+      id: 9,
+      img_url: "/images/game_images/8.webp",
+    },
+    {
+      id: 10,
+      img_url: "/images/game_images/9.webp",
+    },
+    {
+      id: 11,
+      img_url: "/images/game_images/10.webp",
+    },
+    {
+      id: 12,
+      img_url: "/images/game_images/11.webp",
+    },
   ];
 
   function nextImage() {
@@ -62,29 +84,18 @@ export function AboutSection() {
     });
   }
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 1280);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
     <RedBackground>
       <RedDividerLeft />
       <AboutContainer id="about">
         <ContentWrapper>
           <Title>THE GAME</Title>
-          <span />
           <AboutWraper>
             <ImageSlider>
               {images.map((img) => (
                 <GameImage
-                  src={img}
-                  key={img}
+                  src={img.img_url}
+                  key={img.id}
                   style={{ translate: `${-100 * imageIndex}%` }}
                 />
               ))}
@@ -121,17 +132,8 @@ export function AboutSection() {
           </AboutWraper>
         </ContentWrapper>
         <ContentWrapper id="classic">
-          {isMobile ? (
-            <>
-              <Title variant="left">THE CLASSIC</Title>
-              <span />
-            </>
-          ) : (
-            <>
-              <span />
-              <Title variant="left">THE CLASSIC</Title>
-            </>
-          )}
+          <span />
+          <Title variant="left">THE CLASSIC</Title>
           <AboutWraper>
             <InfoWrapper variant="right">
               <Text>
@@ -148,7 +150,7 @@ export function AboutSection() {
                   part of the Madness Combat series.
                 </p>
               </Text>
-              <MainLink
+              <Link
                 href="https://www.newgrounds.com/portal/view/592473/"
                 target="_blank"
               >
@@ -158,7 +160,7 @@ export function AboutSection() {
                   <span />
                   <span />
                 </HoverEffet>
-              </MainLink>
+              </Link>
             </InfoWrapper>
             <ClassicGameImage src="./images/classic_placeholder.webp" />
           </AboutWraper>

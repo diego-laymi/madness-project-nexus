@@ -7,14 +7,16 @@ import { Footer } from "./components/footer";
 import { PageContainer } from "./styles";
 import {
   AboutSection,
-  FeatureSection,
   HeroSection,
+  ModesSections,
   UpdatesSection,
 } from "./components/sections";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-gsap.registerPlugin(useGSAP);
+import { ScrollTrigger, ScrollToPlugin, SplitText } from "gsap/all";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollToPlugin, SplitText);
 
 export function App() {
   return (
@@ -23,7 +25,7 @@ export function App() {
         <Header />
         <HeroSection />
         <AboutSection />
-        <FeatureSection />
+        <ModesSections />
         <UpdatesSection />
         <Footer />
       </PageContainer>

@@ -30,6 +30,6 @@ export const WhiteBackground = styled.div`
     background-image: url("./backgrounds/gridWhiteBackground.png");
     background-position: center;
     background-repeat: repeat-y;
-    opacity: 0.25;
+    opacity: 0.6;
   }
 `;

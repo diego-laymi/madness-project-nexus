@@ -6,9 +6,9 @@ import {
   ImageContainer,
   ItemTextWrapper,
   Link,
-  MainLink,
   Title,
   UpdateItemContainer,
+  UpdateLink,
   UpdatesContainer,
   UpdatesWrapper,
 } from "./styles";
@@ -20,7 +20,7 @@ export function UpdatesSection() {
       <UpdatesContainer>
         <UpdatesWrapper>
           <Title>NEWS & UPATES</Title>
-          <Link
+          <UpdateLink
             href="https://store.steampowered.com/news/app/488860/view/534342138624737336"
             target="_blank"
           >
@@ -46,22 +46,21 @@ export function UpdatesSection() {
                 alt=""
               />
               <ItemTextWrapper>
-                <h4>
-                  Limited Edition Jeb Plushie + Pin & Project Nexus Sitrep!
-                </h4>
+                <h4>Auditor Plush & Shirt + Development Sitrep!</h4>
                 <p>
-                  Makeship has blessed us once again with another merch drop of
-                  biblical proportions! This time around it's the OTHER good
-                  (allegedly) doctor (allegedly) Jebediah Christoff who's graced
-                  us with his presence, both in plushie AND enamel pin form!
+                  So, now that we've gotten some practice under our belts
+                  turning Gods into plushies, we decided to aim a little higher
+                  this time. That's right it's that moody mortal meddler
+                  himself, the Auditor! Coming at you not just as a squishy
+                  little plush and pin, but also as a t-shirt!
                 </p>
               </ItemTextWrapper>
               <ImageContainer>
-                <Image src="https://clan.fastly.steamstatic.com/images/25485323/5a397f7db2f8ace699c46cf7b0565a1a2fa65d2b_400x225.png" />
+                <Image src="/images/updates/update1.webp" alt="" />
               </ImageContainer>
             </UpdateItemContainer>
-          </Link>
-          <Link
+          </UpdateLink>
+          <UpdateLink
             href="https://store.steampowered.com/news/app/488860/view/4488495001178735689"
             target="_blank"
           >
@@ -87,30 +86,24 @@ export function UpdatesSection() {
                 alt=""
               />
               <ItemTextWrapper>
-                <h4>
-                  Limited Edition Boombox Man Vinyl Figure and enamel pin
-                  available NOW!!!
-                </h4>
+                <h4>Phobos + Hot Dog Vendor Plushie!</h4>
                 <p>
-                  Hey there folks! Things are still chugging along with the
-                  Scene Tools over at HQ. Our current objective is getting the
-                  Event system ported to a workable format (.JSON) in order to
-                  enable custom scripted events in your stages (Think
-                  interactables, custom cameras, objectives, cutscenes, etc.
-                  Anything beyond raw go-in-room-kill-stuff gameplay.) We’re
-                  plugging away to get that to y’all in a stable state ASAP but
-                  in the meantime, Makeship’s struck again with some sweet merch
-                  and this time it’s a little different.
+                  A transdimensional megalomaniac and a perennial enigma. A
+                  God-Emperor and a God of Glizzies. The forces of Nevada often
+                  manifest themselves in extremely varied and unforeseen ways,
+                  and there are few incarnations more enduring than that of the
+                  self-proclaimed 'God-Emperor' himself Director Phobos, and the
+                  utterly inexplicable Hot Dog Vendor.
                 </p>
               </ItemTextWrapper>
               <ImageContainer>
-                <Image src="https://clan.fastly.steamstatic.com/images/25485323/da50702d8c229b742885b38f4aeecff2d8ba2a83_400x225.png" />
+                <Image src="/images/updates/update2.webp" alt="" />
               </ImageContainer>
             </UpdateItemContainer>
-          </Link>
+          </UpdateLink>
         </UpdatesWrapper>
         <UpdatesWrapper>
-          <Link
+          <UpdateLink
             href="https://store.steampowered.com/news/app/488860/view/579383283382485029"
             target="_blank"
           >
@@ -136,18 +129,20 @@ export function UpdatesSection() {
                 alt=""
               />
               <ItemTextWrapper>
-                <h4>Sheriff Plushie & Church + Jorge Pins!</h4>
+                <h4>CHURCH + JORGE PLUSHIES & CUSTOM CAMPAIGNS!!!</h4>
                 <p>
-                  Well looky here! If it ain't our old pal the Sheriff! And his
-                  two favorite knuckleheads as well!
+                  We tried making PINS but it WASN'T GOOD ENOUGH! NOW THE BOYS
+                  ARE MARKETABLE and can TAKE A PUNCH! You can PAY THEM to COME
+                  TO YOUR HOUSE and STAND GUARD or be on TEA PARTY DUTY! They
+                  will BAG THEMSELVES and go ANYWHERE IN THE WORLD for CHEAP!
                 </p>
               </ItemTextWrapper>
               <ImageContainer>
-                <Image src="https://clan.fastly.steamstatic.com/images/25485323/9b6ea1d9de3a5cc7d504c1477c82e3a0753ec921_960x311.png" />
+                <Image src="/images/updates/update3.webp" alt="" />
               </ImageContainer>
             </UpdateItemContainer>
-          </Link>
-          <Link
+          </UpdateLink>
+          <UpdateLink
             href="https://store.steampowered.com/news/app/488860/view/544470329026675249"
             target="_blank"
           >
@@ -173,19 +168,20 @@ export function UpdatesSection() {
                 alt=""
               />
               <ItemTextWrapper>
-                <h4>Full Release [1.08.e] Update</h4>
+                <h4>Sharkrobot merch drop and Project Nexus sitrep!</h4>
                 <p>
-                  The release branch is up to date with all beta updates EXCEPT
-                  FOR MODDING! As always, let us know if you see any issues with
-                  the new updates, or anything else you spot!
+                  Hey there folks! We've got a MASSIVE merch drop today from
+                  Sharkrobot, alongside another update on the state of mod
+                  development for Project Nexus. There's a heckuva lot going on
+                  on both fronts, so let's get right into it.
                 </p>
               </ItemTextWrapper>
               <ImageContainer>
-                <Image src="https://clan.fastly.steamstatic.com/images/25485323/9551a44503c986f61878b1c197a5142bafb8617e_400x225.png" />
+                <Image src="/images/updates/update4.webp" alt="" />
               </ImageContainer>
             </UpdateItemContainer>
-          </Link>
-          <MainLink
+          </UpdateLink>
+          <Link
             href="https://store.steampowered.com/news/app/488860"
             target="_blank"
           >
@@ -195,7 +191,7 @@ export function UpdatesSection() {
               <span />
               <span />
             </HoverEffet>
-          </MainLink>
+          </Link>
         </UpdatesWrapper>
       </UpdatesContainer>
       <WhiteDividerRight />

@@ -1,101 +1,84 @@
-import { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 import { DiscordIcon, SteamIcon, TwitterIcon, YouTubeIcon } from "../icons";
+import { IconLink } from "../ui/icon-link";
 import {
+  CopyrightSlot,
   Disclaimer,
   FooterContainer,
   FooterContent,
-  GameInfo,
-  GameInfoImg,
-  GameLink,
-  GameLinkPillar,
-  GameLinks,
-  GameLinksContainer,
-  GameTradeMark,
+  GameLogo,
+  GameSlot,
+  LinksWrapper,
   PillarContainer,
   PillarGroup,
   PillarLeft,
   PillarRight,
+  SocialAndDisclamerWrapper,
+  SocialSlot,
+  Socials,
+  SocialWrapper,
   TradeMark,
 } from "./styles";
 
 export function Footer() {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const isMobile = useMediaQuery({ maxWidth: 1279 });
+  const isLaptop = useMediaQuery({ minWidth: 1280, maxWidth: 1618 });
 
-  useEffect(() => {
-    const handleWindowResizing = () => {
-      setWindowWidth(window.innerWidth);
-    };
-    window.addEventListener("resize", handleWindowResizing);
-
-    return () => window.removeEventListener("resize", handleWindowResizing);
-  }, []);
   return (
     <FooterContainer>
       <FooterContent>
-        <GameInfo>
-          {windowWidth >= 768 && windowWidth < 1280 && (
-            <PillarContainer height={220}>
-              <PillarGroup>
+        {/* Game Info Slot */}
+        <GameSlot>
+          {isMobile && (
+            <PillarContainer>
+              <PillarGroup height={170}>
                 <PillarLeft />
                 <PillarRight />
-              </PillarGroup>
-              <PillarGroup>
                 <PillarLeft />
-                <PillarRight heightMod={50} />
               </PillarGroup>
-              <PillarGroup pt={50}>
-                <PillarLeft />
+              <PillarGroup height={120}>
                 <PillarRight />
-              </PillarGroup>
-            </PillarContainer>
-          )}
-
-          {windowWidth >= 1280 && (
-            <PillarContainer height={172}>
-              <PillarGroup>
-                <PillarLeft />
-                <PillarRight />
-              </PillarGroup>
-              <PillarGroup>
-                <PillarLeft />
-                <PillarRight />
-              </PillarGroup>
-              <PillarGroup>
-                <PillarLeft />
-                <PillarRight />
-              </PillarGroup>
-              <PillarGroup>
                 <PillarLeft />
                 <PillarRight />
               </PillarGroup>
             </PillarContainer>
           )}
-          <GameInfoImg src="./mpn_Logo.png" />
-          {windowWidth >= 768 && windowWidth < 1280 && (
-            <>
-              <TradeMark>
-                <img src="./gibbingtree_Logo.png" alt="" />
-                <p>
-                  MADNESS: Project Nexus is a trademark <br />
-                  of GIBBING TREE, LLC. ALL rights reserved.
-                </p>
-              </TradeMark>
-            </>
+
+          {!isMobile && (
+            <PillarContainer>
+              <PillarGroup height={170}>
+                <PillarLeft />
+                <PillarRight />
+              </PillarGroup>
+              <PillarGroup height={170}>
+                <PillarLeft />
+                <PillarRight />
+              </PillarGroup>
+              <PillarGroup height={170}>
+                <PillarLeft />
+                <PillarRight />
+              </PillarGroup>
+              <PillarGroup height={isLaptop ? 120 : 170}>
+                <PillarLeft />
+                <PillarRight />
+              </PillarGroup>
+            </PillarContainer>
           )}
-        </GameInfo>
+          <GameLogo src="/mpn_logo.png" alt="" />
+        </GameSlot>
 
-        {windowWidth >= 1800 && (
-          <PillarContainer height={359}>
-            <PillarGroup>
-              <PillarLeft />
-              <PillarRight />
-            </PillarGroup>
-          </PillarContainer>
-        )}
+        {/* Pillar Divider on Big Screens */}
+        <PillarContainer className="pillar-divider game-part">
+          <PillarGroup>
+            <PillarLeft />
+            <PillarRight />
+          </PillarGroup>
+        </PillarContainer>
 
-        {windowWidth >= 1280 && (
-          <GameTradeMark mt={50}>
-            <PillarContainer height={172}>
+        {/* Copyright Slot on Big Screens */}
+        {!isMobile && (
+          <CopyrightSlot>
+            <PillarContainer>
               <PillarGroup>
                 <PillarLeft />
                 <PillarRight />
@@ -112,120 +95,81 @@ export function Footer() {
                 of GIBBING TREE, LLC. ALL rights reserved.
               </p>
             </TradeMark>
-          </GameTradeMark>
+          </CopyrightSlot>
         )}
 
-        {windowWidth >= 1800 && (
-          <PillarContainer height={359}>
-            <PillarGroup>
-              <PillarLeft heightMod={50} />
-              <PillarRight heightMod={50} />
-            </PillarGroup>
-          </PillarContainer>
-        )}
+        {/* Pillar Divider on Big Screens */}
+        <PillarContainer className="pillar-divider">
+          <PillarGroup>
+            <PillarLeft />
+            <PillarRight />
+          </PillarGroup>
+        </PillarContainer>
 
-        <GameLinks>
-          <GameLinksContainer mt={windowWidth >= 768 ? "50" : 0}>
-            {windowWidth >= 1400 && (
+        {/* Social Slot */}
+        <SocialSlot>
+          <SocialAndDisclamerWrapper>
+            <Socials>
               <PillarContainer>
                 <PillarGroup>
                   <PillarLeft />
                   <PillarRight />
                 </PillarGroup>
-              </PillarContainer>
-            )}
-            {windowWidth >= 1555 && (
-              <PillarContainer>
                 <PillarGroup>
                   <PillarLeft />
                   <PillarRight />
                 </PillarGroup>
               </PillarContainer>
+              <SocialWrapper>
+                <LinksWrapper>
+                  <IconLink
+                    href="https://discord.gg/projectnexus"
+                    target="_blank"
+                  >
+                    <DiscordIcon />
+                  </IconLink>
+                  <IconLink href="https://x.com/MProjectNexus" target="_blank">
+                    <TwitterIcon />
+                  </IconLink>
+                  <IconLink
+                    href="https://www.youtube.com/@MADNESSProjectNexus/"
+                    target="_blank"
+                  >
+                    <YouTubeIcon />
+                  </IconLink>
+                  <IconLink
+                    href="https://store.steampowered.com/app/488860/MADNESS_Project_Nexus/"
+                    target="_blank"
+                  >
+                    <SteamIcon />
+                  </IconLink>
+                </LinksWrapper>
+                <PillarContainer>
+                  <PillarGroup height={isMobile ? 150 : "100%"}>
+                    <PillarLeft />
+                    <PillarRight />
+                  </PillarGroup>
+                  <PillarGroup height={isMobile ? 150 : "100%"}>
+                    <PillarLeft />
+                    <PillarRight />
+                  </PillarGroup>
+                </PillarContainer>
+              </SocialWrapper>
+            </Socials>
+            {!isMobile && (
+              <Disclaimer>
+                Images belong to their respective owners. Website designed by{" "}
+                <a href="https://github.com/diego-laymi">@FullMiga</a>. Contact
+                for inquiries or removal requests
+              </Disclaimer>
             )}
+          </SocialAndDisclamerWrapper>
+        </SocialSlot>
+      </FooterContent>
 
-            <GameLinkPillar>
-              <GameLink href="https://discord.gg/projectnexus">
-                <img src="./assets/corners_Red/cornerBottomLeft.png" alt="" />
-                <img src="./assets/corners_Red/cornerTopLeft.png" alt="" />
-                <img src="./assets/corners_Red/cornerBottomRight.png" alt="" />
-                <img src="./assets/corners_Red/cornerTopRight.png" alt="" />
-                <DiscordIcon />
-              </GameLink>
-              <PillarLeft
-                height={
-                  windowWidth < 768
-                    ? "150"
-                    : windowWidth >= 768 && windowWidth < 1280
-                      ? "237"
-                      : windowWidth >= 1280 && "154"
-                }
-              />
-            </GameLinkPillar>
-            <GameLinkPillar>
-              <GameLink href="https://x.com/Mprojectnexus/">
-                <img src="./assets/corners_Red/cornerBottomLeft.png" alt="" />
-                <img src="./assets/corners_Red/cornerTopLeft.png" alt="" />
-                <img src="./assets/corners_Red/cornerBottomRight.png" alt="" />
-                <img src="./assets/corners_Red/cornerTopRight.png" alt="" />
-                <TwitterIcon />
-              </GameLink>
-              <PillarRight
-                height={
-                  windowWidth < 768
-                    ? "150"
-                    : windowWidth >= 768 && windowWidth < 1280
-                      ? "237"
-                      : windowWidth >= 1280 && "154"
-                }
-              />
-            </GameLinkPillar>
-            <GameLinkPillar>
-              <GameLink href="https://www.youtube.com/@MADNESSProjectNexus/">
-                <img src="./assets/corners_Red/cornerBottomLeft.png" alt="" />
-                <img src="./assets/corners_Red/cornerTopLeft.png" alt="" />
-                <img src="./assets/corners_Red/cornerBottomRight.png" alt="" />
-                <img src="./assets/corners_Red/cornerTopRight.png" alt="" />
-                <YouTubeIcon />
-              </GameLink>
-              <PillarLeft
-                height={
-                  windowWidth < 768
-                    ? "150"
-                    : windowWidth >= 768 && windowWidth < 1280
-                      ? "237"
-                      : windowWidth >= 1280 && "154"
-                }
-              />
-            </GameLinkPillar>
-            <GameLinkPillar>
-              <GameLink href="https://store.steampowered.com/app/488860/MADNESS_Project_Nexus/">
-                <img src="./assets/corners_Red/cornerBottomLeft.png" alt="" />
-                <img src="./assets/corners_Red/cornerTopLeft.png" alt="" />
-                <img src="./assets/corners_Red/cornerBottomRight.png" alt="" />
-                <img src="./assets/corners_Red/cornerTopRight.png" alt="" />
-                <SteamIcon />
-              </GameLink>
-              <PillarRight
-                height={
-                  windowWidth < 768
-                    ? "150"
-                    : windowWidth >= 768 && windowWidth < 1280
-                      ? "237"
-                      : windowWidth >= 1280 && "154"
-                }
-              />
-            </GameLinkPillar>
-          </GameLinksContainer>
-          {windowWidth >= 768 && (
-            <Disclaimer>
-              All images used on this page are property of their respective
-              copyright holders. If you want your image removed or want to chat,
-              please contact us at fullmiga.dev@gmail.com.
-            </Disclaimer>
-          )}
-        </GameLinks>
-
-        {windowWidth < 768 && (
+      {/* Copyright Slot on Mobile */}
+      {isMobile && (
+        <CopyrightSlot>
           <TradeMark>
             <img src="./gibbingtree_Logo.png" alt="" />
             <p>
@@ -233,16 +177,13 @@ export function Footer() {
               of GIBBING TREE, LLC. ALL rights reserved.
             </p>
           </TradeMark>
-        )}
-
-        {windowWidth < 768 && (
           <Disclaimer>
-            All images used on this page are property of their respective
-            copyright holders. If you want your image removed or want to chat,
-            please contact us at fullmiga.dev@gmail.com.
+            Images belong to their respective owners. Website designed by{" "}
+            <a href="https://github.com/diego-laymi">@FullMiga</a>. Contact for
+            inquiries or removal requests
           </Disclaimer>
-        )}
-      </FooterContent>
+        </CopyrightSlot>
+      )}
     </FooterContainer>
   );
 }

@@ -4,7 +4,7 @@ export function Header() {
   return (
     <HeaderContainer>
       <a href="/">
-        <Logo src="./mpn_Logo.png" />
+        <Logo src="./mpn_logo.png" />
       </a>
     </HeaderContainer>
   );

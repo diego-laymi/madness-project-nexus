@@ -2,328 +2,261 @@ import styled from "styled-components";
 
 export const FooterContainer = styled.footer`
   width: 100%;
-  max-width: 1840px;
   height: auto;
-  margin: 0 auto;
-  padding: 0 16px;
-`
-export const FooterContent = styled.div`
-  margin-top: 40px;
-  margin-bottom: 40px;
+  padding: 0px 20px;
+  padding-bottom: 40px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 32px;
-
-  @media (min-width: 768px)
-  {
-    flex-direction: row;
-    align-items: start;
-    justify-content: center;
-    gap: 20px;
-  }
-`
-
-// GameInfo 
-export const GameInfo = styled.div`
-  display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 20px;
+`;
 
-  @media (min-width: 768px)
-  {
-    max-width: 435px;
-  }
-
-  @media (min-width: 1280px)
-  {
-    max-width: 600px;
-  }
-`
-
-export const GameInfoImg = styled.img`
+export const PillarLeft = styled.span`
   width: 100%;
-  height: auto;
-`
+  min-width: 60px;
+  background-image: ${(props) => props.theme.pilar_gradient_left};
+  clip-path: polygon(
+    100% 100%,
+    16px 100%,
+    0 calc(100% - 16px),
+    0 0,
+    calc(100% - 16px) 0,
+    100% 16px
+  );
+`;
 
-// GameTrademark
-export const GameTradeMark = styled.div`
+export const PillarRight = styled.span`
+  height: 100%;
+  width: 100%;
+  min-width: 60px;
+  background-image: ${(props) => props.theme.pilar_gradient_right};
+  clip-path: polygon(
+    100% calc(100% - 16px),
+    calc(100% - 16px) 100%,
+    0 100%,
+    0 16px,
+    16px 0,
+    100% 0
+  );
+`;
+
+export const PillarGroup = styled.div`
+  height: ${(props) => (props.height ? `${props.height}px` : "100%")};
+  display: flex;
+  gap: 16px;
+`;
+
+export const PillarContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 16px;
+  height: stretch;
+`;
+
+// Footer Container
+export const FooterContent = styled.div`
+  position: relative;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 20px;
-  margin-top: ${props => props.mt ? `${props.mt}px` : 'none'};
+  gap: 16px;
+  z-index: 3;
 
-`
+  .game-part {
+    margin-top: -50px;
+  }
+
+  > .pillar-divider {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  @media (min-width: 1280px) {
+  }
+
+  @media (min-width: 1900px) {
+    > .pillar-divider {
+      display: flex;
+    }
+  }
+`;
+
+// Game Infor Slot
+export const GameSlot = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 100%;
+  gap: 20px;
+
+  ${PillarContainer} {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    ${PillarContainer} {
+      display: flex;
+      margin-top: -50px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    ${PillarContainer} {
+      display: flex;
+      margin-top: -50px;
+    }
+  }
+`;
+
+export const GameLogo = styled.img`
+  height: auto;
+  width: 100%;
+  max-width: 440px;
+
+  @media (min-width: 1280px) {
+    max-width: 592px;
+  }
+`;
+
+export const Disclaimer = styled.p`
+  max-width: 288px;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 150%;
+  color: ${(props) => props.theme.black_300};
+
+  a {
+    color: ${(props) => props.theme.white};
+
+    &:hover {
+      color: ${(props) => props.theme.red};
+    }
+  }
+
+  @media (min-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media (min-width: 1618px) {
+    max-width: 596px;
+    text-align: left;
+  }
+`;
+
+// Copyright Slot
+export const CopyrightSlot = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  height: stretch;
+  width: 300px;
+
+  @media (min-width: 768px) {
+    width: auto;
+    flex-direction: row;
+  }
+
+  @media (min-width: 1280px) {
+    flex-direction: column;
+    width: 288px;
+  }
+`;
 
 export const TradeMark = styled.div`
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
   user-select: none;
+  width: 100%;
 
-  img
-  {
+  img {
     max-width: 277px;
     height: auto;
   }
 
-  p
-  {
-    max-width:372px;
+  p {
+    max-width: 372px;
     font-size: 12px;
     font-weight: 500;
     line-height: 140%;
     text-align: center;
   }
-`
 
-// GameLinks
-export const GameLinks = styled.div`
+  @media (min-width: 768px) {
+    width: 440px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 100%;
+    max-width: 592px;
+  }
+`;
+
+// Social Slot
+export const SocialSlot = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  height: stretch;
 
-  @media (min-width: 768px)
-  {
-    max-width: 285px;
+  .pillar-container: {
+    margin-top: -50px;
   }
+`;
 
-  @media (min-width: 884px) 
-  {
-    max-width: none;
-	  width: min-content;
-    align-items: start;
-  }
-`
-
-export const GameLinkPillar = styled.div`
+export const SocialAndDisclamerWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
-`
+  height: 100%;
+`;
 
-export const GameLinksContainer = styled.div`
-  height: max-content;
+export const Socials = styled.div`
   display: flex;
-  justify-content: center;
-  gap: 16px;
-  margin-top: ${props => props.mt ? `${props.mt}px` : 'none'};
-`
-
-export const GameLink = styled.a`
-  position: relative;
-  z-index: 1;
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60px;
-  height: 60px;
-  background-color: ${props => props.theme.red_transparent};
-  transition: all 0.3s linear;
-  user-select: none;  
-
-  &:hover
-  {
-    background-color: ${props => props.theme.red_hover};
-  }
-
-  img:nth-child(1)
-  {
-    width: 8px;
-    height: 8px;
-
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-
-  img:nth-child(2)
-  {
-    position: absolute;
-    width: 8px;
-    height: 8px;
-
-    top: 0;
-    left: 0;
-  }
-
-  img:nth-child(3)
-  {
-    position: absolute;
-    width: 8px;
-    height: 8px;
-
-    bottom: 0;
-    right: 0;
-  }
-
-  img:nth-child(4)
-  {
-    position: absolute;
-    width: 8px;
-    height: 8px;
-
-    top: 0;
-    right: 0;
-  }
-`
-
-// Disclaimer
-export const Disclaimer = styled.p`
-  max-width: 600px;
-  font-size: 12px;
-  font-weight: 400;
-  text-align: center;
-  line-height: 150%;
-  color: ${props => props.theme.black_300};
-
-  @media (min-width: 768px)
-  {
-    font-size: 14px;
-  }
-
-  @media (min-width: 884px)
-  {
-    text-align: left;
-  }
-
-`
-
-// Pillar
-
-export const PillarLeft = styled.span`
-  height: ${props => props.height ? `${props.height}px` : props.heightMod ? `calc(100% - ${props.heightMod}px)` : '100%'};
-  width: 100%;
-  min-width: 60px;
-  background-image: ${props => props.theme.pilar_gradient_left};
-  clip-path: polygon(100% 100%, 16px 100%, 0 calc(100% - 16px), 0 0, calc(100% - 16px) 0, 100% 16px);
-
-`
-
-export const PillarRight = styled.span`
-  height: ${props => props.height ? `${props.height}px` : props.heightMod ? `calc(100% - ${props.heightMod}px)` : '100%'};
-  width: 100%;
-  min-width: 60px;
-  background-image: ${props => props.theme.pilar_gradient_right};
-  clip-path: polygon(100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%, 0 16px, 16px 0, 100% 0);
-`
-
-export const PillarContainer = styled.div`
-  height: ${props => props.height ? `${props.height}px` : 'auto'};
-  display: flex;
+  flex-direction: column;
   gap: 20px;
-`
-
-export const PillarGroup = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 15px;
-  padding-top: ${props => props.pt ? `${props.pt}px` : '0'};
-`
-
-export const Group = styled.div`
-  height: max-content;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-`
-
-export const PilarGroups = styled.div`
   flex: 1;
-  display: flex;
-  gap: 20px;
-`
 
-export const FooterImage = styled.img`
-  width: 600px;
-  height: auto;
-
-  @media (max-width: 1280px) 
-  {
-	width: 428px;
+  > ${PillarContainer} {
+    display: none;
   }
-`
 
-export const TradeMarkImage = styled.img`
-  width: 277px;
-  height: auto;
-`
+  @media (min-width: 768px) {
+    ${PillarGroup} {
+      height: 100%;
+    }
+  }
 
-export const TabletFooterWrapper = styled.div`
-  height: 100%;
+  @media (min-width: 1280px) {
+    flex-direction: row;
+  }
+
+  @media (min-width: 1618px) {
+    > ${PillarContainer} {
+      display: flex;
+    }
+  }
+`;
+
+export const SocialWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  height: 100%;
   gap: 20px;
-`
+`;
 
-export const TabletGameLinks = styled.div`
-  height: 360px;
-  display: flex;
-  gap: 15px;
-`
-
-export const TableFooterInfo = styled.div`
-  display: flex;
-  gap: 15px;
-`
-
-// Links
-export const TabletGameLogo = styled.div`
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-`
-
-export const TabletPilarContainer = styled.div`
-height: 100%;
-  display: flex;
-  gap: 15px;
-`
-
-export const TabletGameImage = styled.img`
-  max-width: 435px;
-  height: auto;
-`
-
-export const TableLinksContainer = styled.div`
-  height: 100%;
-  display: flex;
-  gap: 15px;
-`
-
-// Info
-export const TabletTradeMark = styled.div`
-  width: 435px;
-  display: flex;
-  justify-content: center;
-`
-
-// Mobile 
-
-export const MobileFooterWrapper = styled.div`
-  width: 100%;
-  display: flex; 
-  flex-direction: column;
-  gap: 32px;
-  margin-top: 48px;
-  margin-bottom: 32px;
-  padding: 0 16px;
-`
-
-export const MibileGameLogo = styled.img`
-  width: 100%;
-  height: auto;  
-`
-
-export const MobileLinksWrapper = styled.div`
+export const LinksWrapper = styled.div`
   display: flex;
   gap: 16px;
-  justify-content: center;
-`
+`;

@@ -64,7 +64,7 @@ export function Footer() {
               </PillarGroup>
             </PillarContainer>
           )}
-          <GameLogo src="/mpn_logo.png" alt="" />
+          <GameLogo src="./mpn_logo.png" alt="" />
         </GameSlot>
 
         {/* Pillar Divider on Big Screens */}

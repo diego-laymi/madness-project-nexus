@@ -22,51 +22,51 @@ export function AboutSection() {
   const images = [
     {
       id: 1,
-      img_url: "/images/game_images/0.webp",
+      img_url: "./images/game_images/0.webp",
     },
     {
       id: 2,
-      img_url: "/images/game_images/1.webp",
+      img_url: "./images/game_images/1.webp",
     },
     {
       id: 3,
-      img_url: "/images/game_images/2.webp",
+      img_url: "./images/game_images/2.webp",
     },
     {
       id: 4,
-      img_url: "/images/game_images/3.webp",
+      img_url: "./images/game_images/3.webp",
     },
     {
       id: 5,
-      img_url: "/images/game_images/4.webp",
+      img_url: "./images/game_images/4.webp",
     },
     {
       id: 6,
-      img_url: "/images/game_images/5.webp",
+      img_url: "./images/game_images/5.webp",
     },
     {
       id: 7,
-      img_url: "/images/game_images/6.webp",
+      img_url: "./images/game_images/6.webp",
     },
     {
       id: 8,
-      img_url: "/images/game_images/7.webp",
+      img_url: "./images/game_images/7.webp",
     },
     {
       id: 9,
-      img_url: "/images/game_images/8.webp",
+      img_url: "./images/game_images/8.webp",
     },
     {
       id: 10,
-      img_url: "/images/game_images/9.webp",
+      img_url: "./images/game_images/9.webp",
     },
     {
       id: 11,
-      img_url: "/images/game_images/10.webp",
+      img_url: "./images/game_images/10.webp",
     },
     {
       id: 12,
-      img_url: "/images/game_images/11.webp",
+      img_url: "./images/game_images/11.webp",
     },
   ];
 

@@ -56,7 +56,7 @@ export function UpdatesSection() {
                 </p>
               </ItemTextWrapper>
               <ImageContainer>
-                <Image src="/images/updates/update1.webp" alt="" />
+                <Image src="./images/updates/update1.webp" alt="" />
               </ImageContainer>
             </UpdateItemContainer>
           </UpdateLink>
@@ -97,7 +97,7 @@ export function UpdatesSection() {
                 </p>
               </ItemTextWrapper>
               <ImageContainer>
-                <Image src="/images/updates/update2.webp" alt="" />
+                <Image src="./images/updates/update2.webp" alt="" />
               </ImageContainer>
             </UpdateItemContainer>
           </UpdateLink>
@@ -138,7 +138,7 @@ export function UpdatesSection() {
                 </p>
               </ItemTextWrapper>
               <ImageContainer>
-                <Image src="/images/updates/update3.webp" alt="" />
+                <Image src="./images/updates/update3.webp" alt="" />
               </ImageContainer>
             </UpdateItemContainer>
           </UpdateLink>
@@ -177,7 +177,7 @@ export function UpdatesSection() {
                 </p>
               </ItemTextWrapper>
               <ImageContainer>
-                <Image src="/images/updates/update4.webp" alt="" />
+                <Image src="./images/updates/update4.webp" alt="" />
               </ImageContainer>
             </UpdateItemContainer>
           </UpdateLink>

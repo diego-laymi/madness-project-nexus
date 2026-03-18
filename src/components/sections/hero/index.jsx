@@ -126,15 +126,15 @@ export function HeroSection() {
   return (
     <HeroContainer ref={containerRef}>
       <HeroImageFrame id="parallax">
-        <img className="bg" src="/hero/hero_background.webp" alt="" />
-        <img className="lyr-1" src="/hero/hero_image-1.webp" alt="" />
-        <img className="lyr-char" src="/hero/hero_image-2.webp" alt="" />
-        <img className="lyr-char" src="/hero/hero_image-3.webp" alt="" />
-        <img className="lyr-1" src="/hero/hero_image-4.webp" alt="" />
-        <img className="lyr-char" src="/hero/hero_image-5.webp" alt="" />
-        <img className="lyr-2" src="/hero/hero_image-6.webp" alt="" />
-        <img className="lyr-2" src="/hero/hero_image-7.webp" alt="" />
-        <img className="lyr-2" src="/hero/hero_image-8.webp" alt="" />
+        <img className="bg" src="./hero/hero_background.webp" alt="" />
+        <img className="lyr-1" src="./hero/hero_image-1.webp" alt="" />
+        <img className="lyr-char" src="./hero/hero_image-2.webp" alt="" />
+        <img className="lyr-char" src="./hero/hero_image-3.webp" alt="" />
+        <img className="lyr-1" src="./hero/hero_image-4.webp" alt="" />
+        <img className="lyr-char" src="./hero/hero_image-5.webp" alt="" />
+        <img className="lyr-2" src="./hero/hero_image-6.webp" alt="" />
+        <img className="lyr-2" src="./hero/hero_image-7.webp" alt="" />
+        <img className="lyr-2" src="./hero/hero_image-8.webp" alt="" />
       </HeroImageFrame>
       <HeroInfoFrame>
         <HeroInfoWrapper>

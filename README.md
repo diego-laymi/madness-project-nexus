@@ -2,7 +2,7 @@
 
 ![Preview do Projeto](./public/og-image.jpg)
 
-This is a front-end project developed using React, CSS, and GSAP. This landing page was created to practice my skills and showcase one of my favorite games.
+This is a front-end project developed using React, CSS, and GSAP. This landing page was created to practice my skills and showcase one of my favorite games. Access the [live demo](https://diego-laymi.github.io/madness-project-nexus/).
 
 ### Built With
 
